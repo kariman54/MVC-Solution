@@ -1,0 +1,61 @@
+﻿@model Loginmodelview
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_AuthLayout1.cshtml";
+}
+<div asp-validation-summary="All">
+
+</div>
+<div class="modal-body">
+    <form class="login_form" asp-action="Login">
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label fw-bold">Email</label>
+            <input asp-for="Email"
+                   class="form-control"
+                   id="username"
+                   aria-describedby="usernameHelp"
+                   placeholder="Enter your Email"
+                   required />
+            <span asp-validation-for="Email" class="text-danger"></span>
+
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label fw-bold">Password</label>
+            <input asp-for="Password"
+                   class="form-control"
+                   id="password"
+                   placeholder="Enter your password"
+                   required />
+            <span asp-validation-for="Password" class="text-danger"></span>
+
+        </div>
+        <div class="mb-3 form-check">
+            <input asp-for="RememberMe"
+                   class="form-check-input"
+                   id="rememberMe" />
+            <label class="form-check-label" asp-for="RememberMe">Remember Me</label>
+            <span asp-validation-for="Password" class="text-danger"></span>
+
+        </div>
+        <button type="submit" class="btn main-btn ms-0 mb-3">
+            Login
+        </button>
+        <a href="#">Forgot Password?</a>
+        <hr />
+        <p class="text-center fw-bold">OR</p>
+        <hr />
+        <div class="text-center log-option mb-3">
+            <a href="#" class="btn main-btn btn-sm me-2 ms-0">
+                <i class="fab fa-facebook-f me-3"></i> Login with Facebook
+            </a>
+            <a href="#" class="btn btn-light btn-sm main-btn ms-0">
+                <i class="fab fa-google me-3"></i> Login with Google
+            </a>
+        </div>
+    </form>
+    <p>Don't have an account?<a asp-action="Rgister">Sign Up</a></p>
+
+</div>
+@*@section validationscriptsection{
+    <partial name="ValidationScriptsPartial" />
+}*@

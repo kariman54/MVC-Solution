@@ -1,0 +1,166 @@
+﻿:root {
+    --myblue: #033373;
+    --mylight: #17b8da;
+    --mywhite: white;
+    --transition: 0.3s ease-in-out;
+    --animation: left_right 2s ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 1000px;
+    position: relative;
+}
+/* start navbar style */
+.navbar {
+    background-color: var(--mywhite);
+}
+
+    .navbar .navbar-nav .nav-link {
+        color: var(--myblue);
+        font-size: 20px;
+        transition: var(--transition);
+        -webkit-transition: var(--transition);
+        -moz-transition: var(--transition);
+        -o-transition: var(--transition);
+        font-weight: bold;
+    }
+
+        .navbar .navbar-nav .nav-link.active,
+        .navbar .navbar-nav .nav-link:focus,
+        .navbar .navbar-nav .nav-link:hover {
+            color: var(--mylight);
+            font-size: 25px;
+        }
+
+    .navbar .navbar-toggler {
+        color: var(--myblue);
+        font-size: 40px;
+        border: var(--myblue);
+    }
+
+.main-btn {
+    background-color: var(--myblue);
+    padding: 10px;
+    color: var(--mywhite);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin-left: 10px;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -o-transition: var(--transition);
+    font-weight: bold;
+}
+
+.btn:hover {
+    color: var(--mywhite);
+    background-color: var(--mylight);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* end navbar style */
+
+/* start login form style */
+
+
+.modal-body .main-btn {
+    width: 100%;
+}
+
+
+.modal-content {
+    color: var(--myblue);
+}
+
+.log-option .main-btn {
+    background-color: var(--myblue);
+    padding: 10px;
+}
+
+/* the fixed top section */
+
+.landing {
+    height: 350px; /* Full viewport height */
+}
+
+    .landing img {
+        width: 100%;
+        height: inherit;
+    }
+
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--myblue); /* Semi-transparent overlay */
+}
+
+    .overlay h3 {
+        color: var(--mywhite);
+        font-size: 40px;
+        animation: var(--animation);
+        -webkit-animation: var(--animation);
+    }
+
+@keyframes left_right {
+    from {
+        transform: translateX(-200%);
+        -webkit-transform: translateX(-200%);
+        -moz-transform: translateX(-200%);
+        -ms-transform: translateX(-200%);
+        -o-transform: translateX(-200%);
+    }
+
+    to {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+    }
+}
+
+
+
+/* footer */
+.footer {
+    background-color: var(--myblue);
+    color: var(--mywhite);
+    padding: 50px 0;
+}
+
+    .footer ul {
+        list-style: none;
+    }
+
+    .footer .col {
+        flex: 1;
+        text-align: center; /* Center all content within columns */
+    }
+
+        .footer .col a {
+            color: var(--mywhite);
+            text-decoration: none; /* Remove underline decoration */
+            transition: var(--transition);
+        }
+
+            .footer .col a:hover {
+                color: var(--mylight);
+            }
+
+        .footer .col h4 {
+            margin-bottom: 15px; /* Add some space below headers*/
+        }

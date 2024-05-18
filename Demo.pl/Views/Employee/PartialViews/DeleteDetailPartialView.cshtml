@@ -1,0 +1,42 @@
+﻿@model EmployeeViewModel
+@if(Model.Imagename is not null)
+{
+    <div class="form-group">
+        <img src="~/files/images/@Model.Imagename" class="rounded" height="40" width="40" />
+        <input asp-for="Imagename" hidden />
+    </div>
+}
+
+<div class="form-group">
+    <label class="col-form-label" asp-for="Name"></label>
+    <input class="for-control" asp-for="Name" />
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Age"></label>
+    <input class="for-control" asp-for="Age" />
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Address"></label>
+    <input class="for-control" asp-for="Address" />
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Hiredate"></label>
+    <input class="for-control" asp-for="Hiredate" />
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Isactive"></label>
+    <input class="for-control" asp-for="Isactive" />
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Salary"></label>
+    <input class="for-control" asp-for="Salary" />
+    <span asp-validation-for="Salary" class="alert-danger"></span>
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Email"></label>
+    <input class="for-control" asp-for="Email" />
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Phonenumber"></label>
+    <input class="for-control" asp-for="Phonenumber" />
+</div>

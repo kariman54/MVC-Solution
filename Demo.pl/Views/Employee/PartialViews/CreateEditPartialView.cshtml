@@ -1,0 +1,58 @@
+﻿@model EmployeeViewModel
+@inject IDepartmentRepository departmentrepo
+@{
+    var departments = new SelectList(await departmentrepo.GetAllAsync(), "Id", "Name");
+}
+<div class="form-group">
+    <label class="col-form-label" asp-for="Name"></label>
+    <input class="for-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="alert-danger"></span>
+</div>
+
+<div class="form-group">
+    <label class="col-form-label" asp-for="Image"></label>
+    <input class="for-control" asp-for="Image" />
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Age"></label>
+    <input class="for-control" asp-for="Age" />
+    <span asp-validation-for="Age" class="alert-danger"></span>
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Address"></label>
+    <input class="for-control" asp-for="Address" />
+    <span asp-validation-for="Address" class="alert-danger"></span>
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Hiredate"></label>
+    <input class="for-control" asp-for="Hiredate" />
+    <span asp-validation-for="Hiredate" class="alert-danger"></span>
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Isactive"></label>
+    <input class="for-control" asp-for="Isactive" />
+    <span asp-validation-for="Isactive" class="alert-danger"></span>
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Salary"></label>
+    <input class="for-control" asp-for="Salary" />
+    <span asp-validation-for="Salary" class="alert-danger"></span>
+</div>
+
+<div class="form-group">
+    <label class="col-form-label" asp-for="Department"></label>
+    <select class="form-control" asp-items="@departments" asp-for="DepartmentId">
+     <option value="@null">------------select department-------------</option>
+
+    </select>
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Email"></label>
+    <input class="for-control" asp-for="Email" />
+    <span asp-validation-for="Email" class="alert-danger"></span>
+</div>
+<div class="form-group">
+    <label class="col-form-label" asp-for="Phonenumber"></label>
+    <input class="for-control" asp-for="Phonenumber" />
+    <span asp-validation-for="Phonenumber" class="alert-danger"></span>
+</div>
